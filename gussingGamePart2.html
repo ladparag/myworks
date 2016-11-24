@@ -1,0 +1,48 @@
+<!Doctype html>
+<html>
+<head>
+<title> JavaScript Gussing Game </title>
+</head>
+<body>
+
+<script>
+
+var input_color;
+var target_color_no;
+var target_color;
+var finished= false;
+var guesses = 0;
+color = ["blue", "cyan", "gold", "grey", "magenta", "orange", "red", "white", "yellow"];
+target_color_no= Math.floor((Math.random()* (color.length-1)));
+target_color = color[target_color_no];
+
+while(!finished){
+
+input_color= prompt("I am thinking of one of these colors:"+"\n\n" + "blue, cyan, gold, grey, magenta,orange,,red,white, yellow"+ "\n\n"+"What color am i thinking of?");
+console.log(target_color);
+guesses=guesses+1;
+finished = check_guess();
+
+}
+
+function check_guess()
+{
+if(input_color > target_color){
+  alert("Your color is alphabetically lower than me" +"\n\n " + "Please try again");
+  return false;
+  }
+ if(input_color < target_color){
+ alert("Your color is alphabetically higher than me"  +"\n\n " + "Please try again");
+ return false;
+ } 
+ if(input_color == target_color){
+ alert("Congratulations! you have gussed the color in " +guesses +"  guesses");
+    document.body.style.background = target_color;
+	return true;
+ }
+}
+
+ </script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!Doctype html>
+<html>
+<head>
+<title> JavaScript Gussing Game </title>
+</head>
+<body>
+
+<script>
+
+var input_color;
+var target_color_no;
+var target_color;
+color = ["blue", "cyan", "gold", "grey", "magenta", "orange", "red", "white", "yellow"];
+target_color_no= Math.floor((Math.random()* (color.length-1)));
+target_color = color[target_color_no];
+
+alert("Random color selected from array:" +target_color);
+input_color= prompt("I am thinking of one of these colors:"+"\n\n\n" + "blue, cyan, gold, grey, magenta,orange,,red,white, yellow"+ "\n\n"+"What color am i thinking of?");
+
+console.log(target_color);
+
+</script>
+
+</body>
+
+</html>
+
+}
